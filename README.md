@@ -1,16 +1,18 @@
-3a.CREATION FOR ECHO CLIENT AND ECHO SERVER USING TCP SOCKETS
-AIM
-To write a python program for creating Echo Client and Echo Server using TCP Sockets Links.
-
-ALGORITHM:
-Import the necessary modules in python
-Create a socket connection to using the socket module.
-Send message to the client and receive the message from the client using the Socket module in server .
-Send and receive the message using the send function in socket.
-PROGRAM
-Devloped by: Akash Ct
-Register NUmber: 212224240007
-SERVER
+# 3a.CREATION FOR ECHO CLIENT AND ECHO SERVER USING TCP SOCKETS
+# AIM
+To write a python program for creating Echo Client and Echo Server using TCP
+Sockets Links.
+## ALGORITHM:
+1. Import the necessary modules in python
+2. Create a socket connection to using the socket module.
+3. Send message to the client and receive the message from the client using the Socket module in
+ server .
+4. Send and receive the message using the send function in socket.
+## PROGRAM
+#### Devloped by: Nithila
+#### Register NUmber: 212224040224
+# SERVER 
+```python
 import socket
 
 HOST = '127.0.0.1'  
@@ -27,7 +29,10 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             if not data:
                 break
             conn.sendall(data)
-CLIENT
+
+```
+# CLIENT
+```python
 import socket
 
 HOST = '127.0.0.1'  
@@ -40,12 +45,8 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.sendall(message.encode())
         data = s.recv(1024)
         print('Received', repr(data.decode()))
-OUTPUT
-SERVER
-image
 
-CLIENT
-image
-
-RESULT
-Thus, the python program for creating Echo Client and Echo Server using TCP Sockets Links was successfully created and executed.
+```
+## OUTPUT
+# SERVER
+![image](https://github.com/user-attachments/assets/43d6648b-d504-4c8f-87ad-f3b9db6a30db)
